@@ -1,0 +1,5 @@
+salesforce-lavis==1.0.2
+nltk==3.6.3
+Pillow==9.3.0
+Flask==2.2.2
+Flask-Cors==3.0.10
