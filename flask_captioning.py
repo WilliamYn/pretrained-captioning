@@ -90,6 +90,12 @@ def zero_shot_classification(raw_image, classes):
     probs = logits_per_image.softmax(dim=1).cpu().detach().numpy()[0]
     return zip(classes, probs)
 
+@app.route("/hello-world", methods=["GET", "POST"])
+def hello_world():
+    """
+    Used to test if the flask app is active
+    """
+    return "Hello World - This is the captioning service"
 
 @app.route("/", methods=["GET", "POST"])
 def handle_request():
