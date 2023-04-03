@@ -5,12 +5,12 @@ RUN apt-get update && \
     apt-get install -y git
 
 WORKDIR /app
-COPY flask_captioning.py /app
+COPY hello.py /app
 
 # COPY requirements.txt requirements.txt
 
 # Install pycocotools
-RUN apt-get install -y gcc
+#RUN apt-get install -y gcc
 #RUN pip install Cython
 #RUN pip install numpy
 #RUN pip install "git+https://github.com/philferriere/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI"
