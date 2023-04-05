@@ -1,4 +1,4 @@
-# pretrained-captioning
+# Pretrained-captioning
 Service d'étiquetage d'image préentrainé.  
 
 
@@ -48,5 +48,5 @@ pretrain_opt2.7b, pretrain_opt6.7b, caption_coco_opt2.7b, caption_coco_opt6.7b
 blip2
 pretrain, pretrain_vitL, coco
 
-### notes
+### Notes
 Un autre modèle que nous avons essayé est vit-gpt2-image-captioning. Nous n’avons pas gardé ce modèle, car il donnait souvent des descriptions imprécises des images. Donc nous avons décidé de ne pas l’utiliser.
