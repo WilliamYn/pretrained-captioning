@@ -50,3 +50,33 @@ pretrain, pretrain_vitL, coco
 
 ### Notes
 Un autre modèle que nous avons essayé est vit-gpt2-image-captioning. Nous n’avons pas gardé ce modèle, car il donnait souvent des descriptions imprécises des images. Donc nous avons décidé de ne pas l’utiliser.
+
+## Utilisation 
+Il y a deux routes rendues disponibles par Flask.
+GET /hello-world    -Pour vérifier l'état du service
+POST /              -Pour évaluer les images et générer les étiquettes et les phrases descriptives
+
+Pour la requete POST, voici les JSON en input et output
+#### Input JSON
+```
+{
+    "image": "image convertit en base64"
+}
+```
+#### Output JSON
+```
+{
+    "tags": [
+        ["tag1", 0.38],
+        ["tag2", 0.12],
+        ...,
+        ["tagX", 0.01]
+    ],
+    "captions": ["the best caption"]
+    "english_captions": [
+        "The sentence the tags were generated from.",
+        ...,
+        "Another sentence the tags were generated from."
+    ]
+}
+```
